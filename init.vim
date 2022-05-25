@@ -12,7 +12,7 @@ call plug#begin()
 Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/tpope/vim-surround'
-"Plug 'https://github.com/tpope/vim-commentary' "For gc and gcc
+Plug 'https://github.com/tpope/vim-commentary' "For gc and gcc
 "Plug 'https://github.com/ap/vim-css-color' "For CSS
 Plug 'https://github.com/rafi/awesome-vim-colorschemes'
 "Plug 'https://github.com/ryanoasis/vim-devicons' "Haven't explored yet
@@ -28,6 +28,13 @@ Plug 'https://github.com/neoclide/coc.nvim' "Requires stuff to be installed: nod
 "sudo npm install -g yarn
 "yarn install
 "pip3 install jedi
+Plug 'tmsvg/pear-tree'
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+"cd venvs    #If doesn't exist make it
+"python -m venv debugpy
+"debugpy/bin/python -m pip install debugpy
+
 call plug#end()
 
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
@@ -46,3 +53,6 @@ map <C-l> <C-W>l
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
 
 :colorscheme molokayo
+
+
+lua require('dap-python').setup('~/venv/debugpy/bin/python')

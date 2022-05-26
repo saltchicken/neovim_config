@@ -35,17 +35,19 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 :PlugInstall
 ```
+
+#### Setup coc (jedi)
+```
+cd .local/share/nvim/plugged/coc.nvim
+sudo npm install -g yarn
+yarn install
+pip3 install jedi
+```
+
 ###### Exit and reopen neovim
 ```
 :CocInstall coc-python
 :TSInstall python
-```
-#### Setup coc (jedi)
-```
-cd .config/nvim/plugged/coc.nvim
-sudo npm install -g yarn
-yarn install
-pip3 install jedi
 ```
 
 ### Setup dap (debugpy)

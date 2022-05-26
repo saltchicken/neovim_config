@@ -35,7 +35,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 :PlugInstall
 ```
-######Exit and reopen neovim
+###### Exit and reopen neovim
 ```
 :CocInstall coc-python
 :TSInstall python

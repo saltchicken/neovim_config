@@ -54,7 +54,7 @@ pip3 install jedi
 ```
 mkdir venvs && cd venvs
 python3 -m venv debugpy
-debugpy/bin/python -m pip install debugpy
+~/venvs/debugpy/bin/python -m pip install debugpy
 ```
 ###### In neovim
 ```

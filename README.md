@@ -3,7 +3,7 @@
 #### Install basic requirements
 ##### Ubuntu
 ```
-sudo apt install python3 python3-pip curl git npm
+sudo apt install python3 python3-pip python3-venv curl git npm
 ```
 
 #### Install neovim

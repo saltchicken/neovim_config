@@ -61,4 +61,4 @@ python3 -m venv debugpy
 :TSInstall python
 ```
 
-```
+###Keybinds

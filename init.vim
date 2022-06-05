@@ -5,7 +5,7 @@
 :set shiftwidth=4
 :set smarttab
 :set softtabstop=4
-:set mouse=a
+":set mouse=a
 
 :set splitbelow
 :set splitright
@@ -33,13 +33,21 @@ Plug 'https://github.com/saltchicken/nvim-benchmark-python'
 call plug#end()
 
 "Use F9 to run current python script
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+"autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+"autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python map <buffer> <F9> :w<CR>:TermExec cmd="python3 %:t" direction=float<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:TermExec cmd="python3 %:t" direction=float<CR>
 
 "NERDTree keybinds
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-N> :NERDTree<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-e> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+
+"ToggleTerm keybinds
+nnoremap <C-t> :ToggleTerm direction=float<CR>
+tnoremap <Esc> <C-\><C-n>
+tmap <C-t> <C-\><C-n><C-t>
 
 "Split window navigation
 map <C-j> <C-W>j

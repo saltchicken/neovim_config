@@ -29,6 +29,8 @@ Plug 'https://github.com/ryanoasis/vim-devicons'
 Plug 'https://github.com/thanthese/tortoise-typing'
 Plug 'akinsho/toggleterm.nvim'
 Plug 'https://github.com/saltchicken/nvim-benchmark-python'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
 
@@ -37,6 +39,8 @@ call plug#end()
 "autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:TermExec cmd="python3 %:t" direction=float<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:TermExec cmd="python3 %:t" direction=float<CR>
+autocmd FileType python map <buffer> <F8> :w<CR>:TermExec cmd="pytest" direction=float<CR>
+autocmd FileType python imap <buffer> <F8> <esc>:w<CR>:TermExec cmd="pytest" direction=float<CR>
 
 "NERDTree keybinds
 nnoremap <C-f> :NERDTreeFocus<CR>
@@ -57,6 +61,12 @@ map <C-l> <C-W>l
 
 "Use tab to select autofill
 inoremap <expr> <Tab> pumvisible() ? coc#_select_confirm() : "<Tab>"
+
+"Telescope keybinds
+nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
+nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
+nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
 
 "DAP calls
 noremap <leader>db :lua require('dap').toggle_breakpoint()

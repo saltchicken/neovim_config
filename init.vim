@@ -1,3 +1,6 @@
+let g:do_filetype_lua = 1
+let g:did_load_filetypes = 0
+
 call plug#begin()
 
 Plug 'preservim/nerdtree'
@@ -101,6 +104,5 @@ dap.listeners.before.event_exited["dapui_config"] = function()
 	dapui.close()
 end
 EOF
-
 :colorscheme molokayo
 

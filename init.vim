@@ -1,3 +1,27 @@
+call plug#begin()
+
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'awesome-vim-colorschemes'
+Plug 'mg979/vim-visual-multi'
+Plug 'neoclide/coc.nvim' 
+Plug 'tmsvg/pear-tree'
+Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap-python'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ryanoasis/vim-devicons' 
+Plug 'thanthese/tortoise-typing'
+Plug 'akinsho/toggleterm.nvim'
+Plug 'saltchicken/nvim-benchmark-python'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'preservim/tagbar' 
+
+call plug#end()
+
 :set number
 :set autoindent
 :set tabstop=4
@@ -8,31 +32,6 @@
 :set splitright
 ":set relativenumber
 ":set mouse=a
-
-call plug#begin()
-
-"Plug 'https://github.com/vim-airline/vim-airline'
-Plug 'https://github.com/preservim/nerdtree'
-Plug 'https://github.com/tpope/vim-surround'
-Plug 'https://github.com/tpope/vim-commentary' "For gc and gcc
-Plug 'https://github.com/rafi/awesome-vim-colorschemes'
-"Plug 'https://github.com/tc50cal/vim-terminal'
-Plug 'https://github.com/mg979/vim-visual-multi'
-Plug 'https://github.com/neoclide/coc.nvim' 
-Plug 'tmsvg/pear-tree'
-Plug 'mfussenegger/nvim-dap'
-Plug 'mfussenegger/nvim-dap-python'
-Plug 'rcarriga/nvim-dap-ui'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-"Plug 'https://github.com/preservim/tagbar' 
-Plug 'https://github.com/ryanoasis/vim-devicons' 
-Plug 'https://github.com/thanthese/tortoise-typing'
-Plug 'akinsho/toggleterm.nvim'
-Plug 'https://github.com/saltchicken/nvim-benchmark-python'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-
-call plug#end()
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "

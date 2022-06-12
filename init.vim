@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'awesome-vim-colorschemes'
+Plug 'rafi/awesome-vim-colorschemes'
 Plug 'mg979/vim-visual-multi'
 Plug 'neoclide/coc.nvim' 
 Plug 'tmsvg/pear-tree'
